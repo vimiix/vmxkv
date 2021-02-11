@@ -1,0 +1,7 @@
+{
+  "data_dir": "./run/data",
+  "log_dir": "./run/log",
+  "socket": "./run/vmxkv.sock",
+  "pid_file": "./run/vmxkvd.pid",
+  "port": 19323
+}
