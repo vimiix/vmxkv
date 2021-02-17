@@ -19,4 +19,18 @@ func main() {
     if err != nil {
     }
     fmt.Println("get:", v)
+    fmt.Println("range find:")
+    db.List(1, 3, func(k, v uint64) bool {
+        fmt.Println(k, v)
+        return true
+    })
+    db.Del(3)
+    fmt.Println(db.Get(3))
+    // Output
+    // get: 2
+    // range find:
+    // 1 1
+    // 2 2
+    // 3 3
+    // 0 not found
 }

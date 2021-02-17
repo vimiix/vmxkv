@@ -359,7 +359,6 @@ func (t *BPTree) rangeFind(startKey, endKey uint64) (count int, keys, values []u
 
 func (t *BPTree) deleteKey(n *Node, key, value interface{}) {
 	t.removeKeyFromNode(n, key, value)
-	fmt.Printf("remove key[%+v] from node:%+v\n", key, n.Keys)
 	if n == t.Root {
 		t.adjustRoot()
 		return
