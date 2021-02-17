@@ -102,6 +102,7 @@ func (t *BPTree) Insert(key, value uint64) (err error) {
 	if _, err = t.Find(key); err == nil {
 		return ErrKeyExist
 	}
+	err = nil
 	if t.Root == nil {
 		t.newTree(key, value)
 		t.updateVersion()

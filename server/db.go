@@ -106,7 +106,6 @@ func OpenDB(path string, mode os.FileMode) (db *DB, err error) {
 	}
 
 	go db.startMonitor()
-	logging.Info("db init success")
 	return
 }
 

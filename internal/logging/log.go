@@ -19,7 +19,7 @@ const (
 )
 
 var (
-	logger             *log.Logger
+	logger             = log.New(os.Stdout, "", log.LstdFlags|log.Lshortfile)
 	logPrefix          string
 	defaultCallerDepth = 2
 	timeFormat         = "20060102"
