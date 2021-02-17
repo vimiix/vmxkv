@@ -16,3 +16,4 @@ vendor/
 
 .idea/
 run/
+dist/

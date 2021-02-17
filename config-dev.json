@@ -1,7 +1,8 @@
 {
-  "data_dir": "./run/data",
+  "db_file": "vmxkv.db",
   "log_dir": "./run/log",
   "socket": "./run/vmxkv.sock",
   "pid_file": "./run/vmxkvd.pid",
-  "port": 19323
+  "port": 1323,
+  "read_only": true
 }

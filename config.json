@@ -1,7 +1,0 @@
-{
-    "data_dir": "/var/lib/vmxkv",
-    "log_dir": "/var/log/vmxkv",
-    "socket": "/var/lib/vmxkv/vmxkv.sock",
-    "pid_file": "/var/run/vmxkvd/vmxkvd.pid",
-    "port": 19323
-}
