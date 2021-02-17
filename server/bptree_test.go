@@ -39,7 +39,7 @@ func TestBPTree_Insert(t *testing.T) {
 
 func TestBPTree_Find(t *testing.T) {
 	bpt := NewBPTree(4)
-	for i := 0; i<=10; i++ {
+	for i := 0; i <= 10; i++ {
 		bpt.Insert(uint64(i), uint64(i))
 	}
 	v, err := bpt.Find(1)
@@ -60,7 +60,7 @@ func TestBPTree_Find(t *testing.T) {
 
 func TestBPTree_RangeFind(t *testing.T) {
 	bpt := NewBPTree(4)
-	for i := 0; i<=10; i++ {
+	for i := 0; i <= 10; i++ {
 		bpt.Insert(uint64(i), uint64(i))
 	}
 
@@ -93,7 +93,7 @@ func TestBPTree_RangeFind(t *testing.T) {
 func BenchmarkBPTree_InsertWith3Degree(b *testing.B) {
 	b.ResetTimer()
 	bpt := NewBPTree(3)
-	for i:=0;i<b.N;i++{
+	for i := 0; i < b.N; i++ {
 		bpt.Insert(uint64(i), uint64(i))
 	}
 }
@@ -101,7 +101,7 @@ func BenchmarkBPTree_InsertWith3Degree(b *testing.B) {
 func BenchmarkBPTree_InsertWith4Degree(b *testing.B) {
 	b.ResetTimer()
 	bpt := NewBPTree(4)
-	for i:=0;i<b.N;i++{
+	for i := 0; i < b.N; i++ {
 		bpt.Insert(uint64(i), uint64(i))
 	}
 }
@@ -109,115 +109,115 @@ func BenchmarkBPTree_InsertWith4Degree(b *testing.B) {
 func BenchmarkBPTree_InsertWith6Degree(b *testing.B) {
 	b.ResetTimer()
 	bpt := NewBPTree(6)
-	for i:=0;i<b.N;i++{
+	for i := 0; i < b.N; i++ {
 		bpt.Insert(uint64(i), uint64(i))
 	}
 }
 
 func BenchmarkBPTree_FindWith3Degree1000Elements(b *testing.B) {
 	bpt := NewBPTree(3)
-	for i := 0; i<=1000; i++ {
+	for i := 0; i <= 1000; i++ {
 		bpt.Insert(uint64(i), uint64(i))
 	}
 	b.ResetTimer()
-	for i:=0;i<b.N;i++{
-		k := i%1000
+	for i := 0; i < b.N; i++ {
+		k := i % 1000
 		bpt.Find(uint64(k))
 	}
 }
 
 func BenchmarkBPTree_FindWith4Degree1000Elements(b *testing.B) {
 	bpt := NewBPTree(4)
-	for i := 0; i<=1000; i++ {
+	for i := 0; i <= 1000; i++ {
 		bpt.Insert(uint64(i), uint64(i))
 	}
 	b.ResetTimer()
-	for i:=0;i<b.N;i++{
-		k := i%10000
+	for i := 0; i < b.N; i++ {
+		k := i % 10000
 		bpt.Find(uint64(k))
 	}
 }
 
 func BenchmarkBPTree_FindWith6Degree1000Elements(b *testing.B) {
 	bpt := NewBPTree(6)
-	for i := 0; i<=1000; i++ {
+	for i := 0; i <= 1000; i++ {
 		bpt.Insert(uint64(i), uint64(i))
 	}
 	b.ResetTimer()
-	for i:=0;i<b.N;i++{
-		k := i%1000
+	for i := 0; i < b.N; i++ {
+		k := i % 1000
 		bpt.Find(uint64(k))
 	}
 }
 
 func BenchmarkBPTree_FindWith3Degree10000Elements(b *testing.B) {
 	bpt := NewBPTree(3)
-	for i := 0; i<=10000; i++ {
+	for i := 0; i <= 10000; i++ {
 		bpt.Insert(uint64(i), uint64(i))
 	}
 	b.ResetTimer()
-	for i:=0;i<b.N;i++{
-		k := i%10000
+	for i := 0; i < b.N; i++ {
+		k := i % 10000
 		bpt.Find(uint64(k))
 	}
 }
 
 func BenchmarkBPTree_FindWith4Degree10000Elements(b *testing.B) {
 	bpt := NewBPTree(4)
-	for i := 0; i<=10000; i++ {
+	for i := 0; i <= 10000; i++ {
 		bpt.Insert(uint64(i), uint64(i))
 	}
 	b.ResetTimer()
-	for i:=0;i<b.N;i++{
-		k := i%10000
+	for i := 0; i < b.N; i++ {
+		k := i % 10000
 		bpt.Find(uint64(k))
 	}
 }
 
 func BenchmarkBPTree_FindWith6Degree10000Elements(b *testing.B) {
 	bpt := NewBPTree(6)
-	for i := 0; i<=10000; i++ {
+	for i := 0; i <= 10000; i++ {
 		bpt.Insert(uint64(i), uint64(i))
 	}
 	b.ResetTimer()
-	for i:=0;i<b.N;i++{
-		k := i%10000
+	for i := 0; i < b.N; i++ {
+		k := i % 10000
 		bpt.Find(uint64(k))
 	}
 }
 
 func BenchmarkBPTree_FindWith3Degree100000Elements(b *testing.B) {
 	bpt := NewBPTree(3)
-	for i := 0; i<=100000; i++ {
+	for i := 0; i <= 100000; i++ {
 		bpt.Insert(uint64(i), uint64(i))
 	}
 	b.ResetTimer()
-	for i:=0;i<b.N;i++{
-		k := i%100000
+	for i := 0; i < b.N; i++ {
+		k := i % 100000
 		bpt.Find(uint64(k))
 	}
 }
 
 func BenchmarkBPTree_FindWith4Degree100000Elements(b *testing.B) {
 	bpt := NewBPTree(4)
-	for i := 0; i<=100000; i++ {
+	for i := 0; i <= 100000; i++ {
 		bpt.Insert(uint64(i), uint64(i))
 	}
 	b.ResetTimer()
-	for i:=0;i<b.N;i++{
-		k := i%100000
+	for i := 0; i < b.N; i++ {
+		k := i % 100000
 		bpt.Find(uint64(k))
 	}
 }
 
 func BenchmarkBPTree_FindWith6Degree100000Elements(b *testing.B) {
 	bpt := NewBPTree(6)
-	for i := 0; i<=100000; i++ {
+	for i := 0; i <= 100000; i++ {
 		bpt.Insert(uint64(i), uint64(i))
 	}
 	b.ResetTimer()
-	for i:=0;i<b.N;i++{
-		k := i%10000
+	for i := 0; i < b.N; i++ {
+		k := i % 10000
 		bpt.Find(uint64(k))
 	}
 }

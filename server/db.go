@@ -117,7 +117,11 @@ func (db *DB) Sync() (err error) {
 	if err = db.tree.Dump(db.file); err != nil {
 		return
 	}
-	return db.file.Sync()
+	err = db.file.Sync()
+	if err == nil {
+		db.version = time.Now().Unix()
+	}
+	return
 }
 
 // load 从已有的数据库文件加载数据
@@ -144,7 +148,7 @@ func (db *DB) startMonitor() {
 		case <-db.monitorCloseCh:
 			return
 		case <-time.Tick(db.monitorDuration):
-			if db.version > db.tree.Version {
+			if db.version < db.tree.Version {
 				db.Sync()
 			}
 		}

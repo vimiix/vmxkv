@@ -2,11 +2,9 @@
 
 > **[WIP Project]**
 
-## TODO 
+### 项目介绍
 
-- http RESTFul server
-- vmxkv-cli
-- docker image
+[[文档]](https://vimiix.com/post/83/) | [[视频]](https://www.bilibili.com/video/bv1vy4y1Y71X)
 
 ## Run 
 
@@ -37,3 +35,9 @@ BenchmarkBPTree_FindWith6Degree100000Elements-8   	17056522	        71.3 ns/op
 PASS
 ok  	github.com/vimiix/vmxkv/server	17.367s
 ```
+
+## TODO 
+
+- HTTP RESTFul server
+- vmxkv-cli
+- docker image
